@@ -1,15 +1,50 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>My Frist Website</title>
+    <head lang="en">
+        <meta name="viewport" content="width=device-width,
+        initial-scale=1.0" />
+        <title>Mafure website</title>
+        <style>
+            dialog::backdrop {
+                background-image: url(https://4kwallpapers.com/images/walls/thumbs_3t/9793.jpg);
+            }
+        </style>
     </head>
     <body>
-        <h1>My First Website</h1>
-        <h2>An HTML Playground</h2>
+        <button data-open-modal>Open</button>
+        
+        <dialog data-modal>
+            <form>
+                <div>something like model</div>
+                <input type="text">
+                <button type="submit">Submit</button>
+                <button type="submit" formmethod="dialog">Cancle</button>
+            </form>
+        </dialog>
 
-        This is my very first website and I'm <b>extremely excited!!!!!</b>
+        <script>
+            const openButton = document.querySelector("[data-open-modal]")
+            const modal = document.querySelector("[data-modal]")
+
+            openButton.addEventListener("click", () => {
+                modal.showModal()
+            })
+
+            modal.addEventListener("click", e => {
+                const dialogdomain = modal.getBoundingClientRect()
+                if (
+                    e.clientX < dialogdomain.left ||
+                    e.clientX > dialogdomain.right ||
+                    e.clientX < dialogdomain.top ||
+                    e.clientX > dialogdomain.bottom
+                ) (
+                    modal.close()
+                )
+            })
+        </script>
+        <marquee>
+            <b>This is my first website and I'm extremely excited!!!!!</b>
+        </marquee>
 
         <p>
             <hr>
@@ -19,22 +54,14 @@
         </p>
         <a href="https://www.facebook.com/people/%E3%82%AD%E3%83%89%E3%83%A1%E3%83%83%E3%83%91%E3%83%BC-%E3%82%AD%E3%83%89%E3%83%8A%E3%83%83%E3%83%91%E3%83%BC/pfbid0fmJZGYeLoWiEbtBZUcyZyYA1TN7AySTwniUZG8tAPmpxN4J2hwR4hPutfyNqxra8l/">
         something went wrong?</a>
-        <img src="https://scontent.fkkc3-1.fna.fbcdn.net/v/t39.30808-6/359828915_946579603291160_7959727254411845525_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=5614bc&_nc_eui2=AeGe50wu1Cg6kNPsg01Sz2hurAU6kogqpe2sBTqSiCql7c6bkKpL7BxAV9X-kYY5xTQAfz7HWCTIlg9pCQl3wp_x&_nc_ohc=Y_8R46TSaMEAX_Zxhn7&_nc_ht=scontent.fkkc3-1.fna&oh=00_AfB4TuC0AGSWk6W_A1MCYb5OFS4kmdGbSc62PdAOJS7MPA&oe=64F7AAF6"
-        border="10">
-        <table border="10" cellpadding="10" cellspacing="0">
+        <table border="1" cellpadding="10" cellspacing="0">
             <tr>
-                <th>Year</th>
-                <th>Month</th>
-                <th>Day</th>
-                <th colspan="3">Date</th>
+                <th colspan="3">Date create</th>
             </tr>
             <tr>
-                <td>2023</td>
-                <td>9</td>
                 <td>2</td>
-                <td>2023</td>
                 <td>9</td>
-                <td>2</td>
+                <td>2566</td>
             </tr>
         </table>
     </body>
