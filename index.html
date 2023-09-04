@@ -1,66 +1,78 @@
 <!DOCTYPE html>
-<html>
-    <head lang="en">
+<html lang="en">
+    <head>
         <meta name="viewport" content="width=device-width,
         initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Mafure website</title>
+        <link rel="stylesheet" href="styles.css">
         <style>
             body {
-                background-image: url(https://4kwallpapers.com/images/walls/thumbs_3t/9793.jpg);
+                background-position: center;
                 background-repeat: no-repeat;
                 background-attachment: fixed;
                 background-size: 100% 100%;
+                background-image: url(https://4kwallpapers.com/images/walls/thumbs_3t/10029.jpg);
             }
-            dialog::backdrop {
-                background-position: center;
-                background-image: url(https://4kwallpapers.com/images/walls/thumbs_3t/9793.jpg);
+        </style>
+        <style type="text/css">
+            h1 {
+                text-align: center;
             }
         </style>
     </head>
     <body>
-        <button data-open-modal>Open</button>
-        
-        <dialog data-modal>
-            <form>
-                <div>something like model</div>
-                <input type="text">
-                <button type="submit">Submit</button>
-                <button type="submit" formmethod="dialog">Cancle</button>
-            </form>
-        </dialog>
+        <p><font color="F30E0E">
+        <h1>Welcome to my Website</h1>
+        </font>
+        </p>
+        <!--Modal Buttons-->
+        <button class="modal-open"
+        data-modal="modal1">Bookshelf</button>
+        <br>
+        <button class="modal-open"
+        data-modal="modal2">Open modal 2</button>
 
-        <script>
-            const openButton = document.querySelector("[data-open-modal]")
-            const modal = document.querySelector("[data-modal]")
-
-            openButton.addEventListener("click", () => {
-                modal.showModal()
-            })
-
-            modal.addEventListener("click", e => {
-                const dialogdomain = modal.getBoundingClientRect()
-                if (
-                    e.clientX < dialogdomain.left ||
-                    e.clientX > dialogdomain.right ||
-                    e.clientX < dialogdomain.top ||
-                    e.clientX > dialogdomain.bottom
-                ) (
-                    modal.close()
-                )
-            })
-        </script>
+        <!--Modals-->
+        <div class="modal" id="modal1">
+            <div class="modal-content">
+                <div class="modal-header">This is test 1
+                    <button class="icon modal-close"><i 
+                    class="material-icons">X</i></button>
+                </div>
+                <div class="modal-body"><a href="bookshelf.html">
+                    <button>something in here?</button></a>
+                </div>
+            </div>
+        </div>
+        <div class="modal" id="modal2">
+            <div class="modal-content">
+                <div class="modal-header">This is test 2
+                    <button class="icon modal-close"><i 
+                    class="material-icons">X</i></button>
+                </div>
+                <div class="modal-body">something in here?</div>
+                <div class="modal-footer"><button 
+                class="link modal-close">Close 
+                Modal</button></div>
+            </div>
+        </div>
+        <script src="app.js"></script>
+        <br>
         <marquee>
             <b>This is my first website and I'm extremely excited!!!!!</b>
         </marquee>
-
+        <br>
         <p>
             <hr>
             i don't know anything much but<br>
             i will do this web with my best!
             <hr>
         </p>
+        <br>
         <a href="https://www.facebook.com/people/%E3%82%AD%E3%83%89%E3%83%A1%E3%83%83%E3%83%91%E3%83%BC-%E3%82%AD%E3%83%89%E3%83%8A%E3%83%83%E3%83%91%E3%83%BC/pfbid0fmJZGYeLoWiEbtBZUcyZyYA1TN7AySTwniUZG8tAPmpxN4J2hwR4hPutfyNqxra8l/">
-        something went wrong?</a>
+        <button>something went wrong?</button></a>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br>
         <table border="1" cellpadding="10" cellspacing="0">
             <tr>
                 <th colspan="3">Date create</th>
