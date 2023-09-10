@@ -21,4 +21,7 @@ window.onclick = function(e) {
     if(e.target.closeName === 'modaol') {
         e.target.style.display = 'none';
     }
+    if(e.target.closeName != data-modal) {
+        e.target.style.display = 'none';
+    }
 }
