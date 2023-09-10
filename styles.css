@@ -3,6 +3,15 @@
     padding: 0;
 }
 
+.modal-open1 {
+    padding: 8px 16px;
+    background: chartreuse;
+    color: bisque;
+    border-radius: 4px;
+    outline: none;
+    border: none;
+}
+
 .modal-open {
     padding: 8px 16px;
     background: royalblue;
@@ -25,7 +34,7 @@
 }
 
 .modal-content {
-    background: #fff;
+    background: #1AB1F2;
     margin-top: 100px;
     width: 50%;
     margin-left: auto;
@@ -52,7 +61,7 @@
 }
 
 .modal-body {
-    color: #7b7b7b;
+    color: blanchedalmond;
     padding: 15px 0;
 }
 
@@ -61,12 +70,13 @@
 }
 
 .modal-footer .modal-close {
+    background: rgba(1, 10, 20, 0.1);
     padding: 8px 16px;
     font-size: 14px;
     border: none;
     outline: none;
     border-radius: 4px;
-    color: #1a73e8;
+    color: black;
 }
 
 
